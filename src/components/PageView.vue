@@ -31,11 +31,14 @@
 </template>
 
 <style scoped lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
   $bg-color: #faedcd;
   $border-color: #d4a373;
   $border-color-alt: #ba7f44;
   $main: #ccd5ae;
   $alt: #e9edc9;
+  $font: 'Caveat', cursive, Helvetica, Arial, sans-serif;
 
   .page {
     width: 100vw;
@@ -63,11 +66,29 @@
     margin-bottom: 25px;
   }
 
+  .page-content,
+  .page-title {
+    outline: 0;
+  }
+
+  .page-content {
+    font-family: $font;
+    font-size: 35px;
+    padding: 15px;
+    height: 25vh;
+  }
+
+  .page-title {
+    font-family: $font;
+    font-size: 20px;
+  }
+
   label {
     margin-bottom: 10px;
     display: inline-block;
     color: $main;
     font-weight: bolder;
+    font-size: 25px;
   }
 
   button {
