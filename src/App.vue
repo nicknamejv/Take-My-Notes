@@ -15,7 +15,9 @@
 </script>
 
 <style lang="scss">
-  $font: Avenir, Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+  $font: 'Caveat', cursive, Helvetica, Arial, sans-serif;
   $bg-color: #faedcd;
   $border-color: #d4a373;
   $border-color-alt: #ba7f44;
