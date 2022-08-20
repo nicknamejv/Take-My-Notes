@@ -14,13 +14,16 @@
   });
 </script>
 
-<style>
+<style lang="scss">
+  $font: Avenir, Helvetica, Arial, sans-serif;
+  $bg-color: #faedcd;
+  $border-color: #d4a373;
+  $border-color-alt: #ba7f44;
+  $main: #ccd5ae;
+  $alt: #e9edc9;
+
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    box-sizing: border-box;
+    font-family: $font;
   }
 </style>
