@@ -23,7 +23,8 @@
       PageView,
       PageList,
     },
-    data() {
+
+    data(): any {
       return {
         pages: [],
         index: 0,

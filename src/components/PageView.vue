@@ -3,29 +3,44 @@
 
   export default defineComponent({
     name: 'PageView',
+    methods: {
+      // Delete the current page from the list of pages.
+      deletePage() {
+        this.$emit('delete-page');
+      },
+      // Save current page to the list of pages.
+      savePage() {
+        this.$emit('save-page');
+      },
+    },
   });
 </script>
 
 <template>
   <div class="page">
-    <div>
+    <div v-if="page">
       <label for="page-title">Title</label>
       <input
         type="text"
+        v-model="page.title"
         class="page-title"
         name="page-title"
         placeholder="Enter a title!"
       />
       <label for="page-content">Content</label>
       <textarea
+        v-model="page.content"
         class="page-content"
         name="page-content"
         placeholder="Take down some notes!"
       ></textarea>
       <div class="btn-footer">
-        <button>Delete Page</button>
-        <button>Save Page</button>
+        <button @click="deletePage()">Delete Page</button>
+        <button @click="savePage()">Save Page</button>
       </div>
+    </div>
+    <div v-else>
+      <h1>Let's take some notes!</h1>
     </div>
   </div>
 </template>
