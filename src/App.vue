@@ -69,5 +69,13 @@
   #app {
     box-sizing: border-box;
     font-family: $font;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    margin: 300px;
   }
 </style>

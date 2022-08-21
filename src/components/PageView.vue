@@ -3,6 +3,11 @@
 
   export default defineComponent({
     name: 'PageView',
+    props: {
+      page: {
+        type: Object,
+      },
+    },
     methods: {
       // Delete the current page from the list of pages.
       deletePage() {
@@ -16,6 +21,7 @@
   });
 </script>
 
+<!-- eslint-disable vue/no-mutating-props -->
 <template>
   <div class="page">
     <div v-if="page">
@@ -35,12 +41,12 @@
         placeholder="Take down some notes!"
       ></textarea>
       <div class="btn-footer">
-        <button @click="deletePage()">Delete Page</button>
-        <button @click="savePage()">Save Page</button>
+        <button>Delete Page</button>
+        <button>Save Page</button>
       </div>
     </div>
     <div v-else>
-      <h1>Let's take some notes!</h1>
+      <h1 class="add-notes">Let's take some notes!</h1>
     </div>
   </div>
 </template>
@@ -56,10 +62,10 @@
   $font: 'Caveat', cursive, Helvetica, Arial, sans-serif;
 
   .page {
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
     padding: 35px;
     background-color: $bg-color;
+    border: 2px solid $border-color;
   }
 
   .title {
@@ -124,5 +130,11 @@
   input,
   textarea {
     padding: 10px;
+  }
+
+  .add-notes {
+    text-align: center;
+    font-size: 50px;
+    color: $main;
   }
 </style>
