@@ -39,19 +39,32 @@
         });
         this.index = this.pages.length - 1;
       },
+
       // Change the current page.
       changePage(index: any) {
         this.index = index;
       },
+
       // TODO: Save the current page to the list of pages to localStorage later.
       savePage() {
-        console.log('save page');
+        localStorage.setItem('pages', JSON.stringify(this.pages));
+        console.log('Saved!');
       },
+
       // Delete the current page from the list of pages.
       deletePage() {
         this.pages.splice(this.index, 1);
-        this.index = 0;
+        localStorage.setItem('pages', JSON.stringify(this.pages));
       },
+    },
+
+    // On app mount, load the list of pages from localStorage.
+    mounted() {
+      console.log('App mounted!');
+      const pages = localStorage.getItem('pages');
+      if (pages) {
+        this.pages = JSON.parse(pages);
+      }
     },
   });
 </script>

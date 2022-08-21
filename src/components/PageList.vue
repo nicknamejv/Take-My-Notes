@@ -16,6 +16,7 @@
       changePage(index: any) {
         this.$emit('change-page', index);
       },
+
       // Add a new page to the list of pages.
       addPage() {
         this.$emit('add-page');
@@ -55,8 +56,7 @@
   $list-border: #d6ccc2;
 
   .page-list {
-    max-width: 500px;
-    width: 400px;
+    width: 500px;
     padding: 10px;
   }
 
@@ -67,6 +67,7 @@
   }
 
   li {
+    max-width: 350px;
     padding: 1rem;
     font-size: 1.25rem;
     min-height: 1.5rem;
