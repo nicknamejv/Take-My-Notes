@@ -7,7 +7,7 @@
       pages: {
         type: Array,
       },
-      activePage: {
+      currentPage: {
         type: Number,
       },
     },
@@ -29,7 +29,8 @@
     <ul>
       <li
         v-for="(page, index) of pages"
-        v-bind:class="{ active: index === activePage }"
+        class="page"
+        v-bind:class="{ active: index === currentPage }"
         @click="changePage(index)"
         v-bind:key="index"
       >
@@ -37,7 +38,84 @@
           {{ page.title }}
         </div>
       </li>
-      <button class="new-page" @click="newPage()">New Page</button>
+      <div class="btn">
+        <button class="add-page" @click="addPage()">New Page</button>
+      </div>
     </ul>
   </div>
 </template>
+
+<style scoped lang="scss">
+  $bg-color: #faedcd;
+  $border-color: #d4a373;
+  $border-color-alt: #ba7f44;
+  $main: #ccd5ae;
+  $alt: #e9edc9;
+  $list: #edede9;
+  $list-border: #d6ccc2;
+
+  .page-list {
+    max-width: 500px;
+    width: 400px;
+    padding: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+  }
+
+  li {
+    padding: 1rem;
+    font-size: 1.25rem;
+    min-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 2px solid $list-border;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: $main;
+  }
+
+  .active {
+    background-color: $main;
+  }
+
+  .active:hover {
+    background-color: $alt;
+  }
+
+  .add-page {
+    cursor: pointer;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  button {
+    border-style: none;
+    padding: 10px;
+    background-color: $border-color;
+    margin-right: 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $border-color-alt;
+  }
+
+  .page {
+    background-color: $list;
+  }
+</style>
