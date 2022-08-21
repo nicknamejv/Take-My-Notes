@@ -13,6 +13,7 @@
       deletePage() {
         this.$emit('delete-page');
       },
+
       // Save current page to the list of pages.
       savePage() {
         this.$emit('save-page');
@@ -41,8 +42,8 @@
         placeholder="Take down some notes!"
       ></textarea>
       <div class="btn-footer">
-        <button>Delete Page</button>
-        <button>Save Page</button>
+        <button @click="deletePage()">Delete Page</button>
+        <button @click="savePage()">Save Page</button>
       </div>
     </div>
     <div v-else>
@@ -136,5 +137,10 @@
     text-align: center;
     font-size: 50px;
     color: $main;
+  }
+
+  .btn-footer {
+    display: flex;
+    justify-content: center;
   }
 </style>
