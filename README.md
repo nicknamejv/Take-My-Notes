@@ -1,24 +1,11 @@
-# take-my-notes
-
-## Project setup
+# Take my notes! A simple Vue application!
+Quick project setup!
+## After cloning the repo please run this command to download all dependencies! 
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run this command to start the application!
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
