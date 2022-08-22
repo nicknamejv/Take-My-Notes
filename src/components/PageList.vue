@@ -47,6 +47,8 @@
 </template>
 
 <style scoped lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
   $bg-color: #faedcd;
   $border-color: #d4a373;
   $border-color-alt: #ba7f44;
@@ -54,6 +56,7 @@
   $alt: #e9edc9;
   $list: #edede9;
   $list-border: #d6ccc2;
+  $font: 'Space Mono', monospace;
 
   .page-list {
     width: 500px;
@@ -67,7 +70,7 @@
   }
 
   li {
-    max-width: 350px;
+    max-width: 500px;
     padding: 1rem;
     font-size: 1.25rem;
     min-height: 1.5rem;
@@ -75,6 +78,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     border: 2px solid $list-border;
+    margin-bottom: 10px;
+    background-color: $list;
   }
 
   li:hover {
@@ -98,7 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   button {
@@ -109,14 +114,18 @@
     border-radius: 5px;
     color: white;
     font-size: 15px;
+    font-family: $font;
     cursor: pointer;
+    transform: translateY(-3px);
+    transition: transform 0.1s ease;
   }
 
   button:hover {
     background-color: $border-color-alt;
+    transform: translateY(-5px);
   }
 
-  .page {
-    background-color: $list;
+  button:active {
+    transform: translateY(0);
   }
 </style>

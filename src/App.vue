@@ -70,9 +70,10 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-  $font: 'Caveat', cursive, Helvetica, Arial, sans-serif;
+  $font: 'Space Mono', monospace;
+
   $bg-color: #faedcd;
   $border-color: #d4a373;
   $border-color-alt: #ba7f44;

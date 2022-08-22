@@ -47,26 +47,26 @@
       </div>
     </div>
     <div v-else>
-      <h1 class="add-notes">Let's take some notes!</h1>
+      <h1 class="add-notes">Let's take some notes! &#10000;</h1>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
   $bg-color: #faedcd;
   $border-color: #d4a373;
   $border-color-alt: #ba7f44;
   $main: #ccd5ae;
   $alt: #e9edc9;
-  $font: 'Caveat', cursive, Helvetica, Arial, sans-serif;
+  $font: 'Space Mono', monospace;
 
   .page {
     width: 50vw;
     padding: 35px;
     background-color: $bg-color;
-    border: 2px solid $border-color;
+    border: 7.5px solid $border-color;
   }
 
   .title {
@@ -95,14 +95,14 @@
 
   .page-content {
     font-family: $font;
-    font-size: 35px;
+    font-size: 20px;
     padding: 15px;
     height: 25vh;
   }
 
   .page-title {
     font-family: $font;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   label {
@@ -122,10 +122,18 @@
     color: white;
     font-size: 15px;
     cursor: pointer;
+    transform: translateY(-3px);
+    transition: transform 0.1s ease;
+    font-family: $font;
   }
 
   button:hover {
     background-color: $border-color-alt;
+    transform: translateY(-5px);
+  }
+
+  button:active {
+    transform: translateY(0);
   }
 
   input,
