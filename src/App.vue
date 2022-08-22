@@ -45,10 +45,9 @@
         this.index = index;
       },
 
-      // TODO: Save the current page to the list of pages to localStorage later.
+      // Save the current page to the list of pages to localStorage later.
       savePage() {
         localStorage.setItem('pages', JSON.stringify(this.pages));
-        console.log('Saved!');
       },
 
       // Delete the current page from the list of pages.
@@ -60,7 +59,6 @@
 
     // On app mount, load the list of pages from localStorage.
     mounted() {
-      console.log('App mounted!');
       const pages = localStorage.getItem('pages');
       if (pages) {
         this.pages = JSON.parse(pages);
